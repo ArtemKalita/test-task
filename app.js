@@ -6,7 +6,6 @@ function test(id) {
     response.json().then((data) => {
       data.results.forEach((element) => {
         const img = element.image;
-
         const dive = document.createElement("div");
         const a = document.createElement("a");
         const image = document.createElement("img");

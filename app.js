@@ -7,7 +7,6 @@ function test(id) {
       data.results.forEach((element) => {
         const img = element.image;
 
-        console.log(element);
         const dive = document.createElement("div");
         const a = document.createElement("a");
         const image = document.createElement("img");
@@ -78,6 +77,5 @@ window.onscroll = function (ev) {
   if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
     e++;
     test(e);
-    console.log(document.querySelectorAll(".card"));
   }
 };

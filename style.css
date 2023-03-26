@@ -18,6 +18,7 @@ a {
 }
 
 .modal {
+  display: none;
   position: fixed; /* фиксированное положение */
   top: 0;
   right: 0;
@@ -44,7 +45,7 @@ a {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 700px;
+    max-width: 730px;
     margin: 30px auto;
   }
 }

@@ -1,4 +1,13 @@
 const card = document.querySelector(".modal");
+let lenth = 0;
+fetch("https://rickandmortyapi.com/api/character?page=", {
+  method: "get",
+}).then((response) => {
+  response.json().then((data) => {
+    lenth = data.info.pages;
+  });
+});
+
 function test(id) {
   const ajaxHandlerScript =
     "https://rickandmortyapi.com/api/character?page=" + id;
@@ -42,7 +51,9 @@ let e = 1;
 test(e);
 window.onscroll = function (ev) {
   if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
-    e++;
-    test(e);
+    if (e < lenth) {
+      e++;
+      test(e);
+    }
   }
 };
